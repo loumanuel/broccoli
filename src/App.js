@@ -198,20 +198,35 @@ class App extends Component {
           </Formulario>
         </main>
         <br/>
-        <br/>
+        <hr/>
+          <div style={{color:'#bb2929'}}>Importante</div>
+            <div className="terminosss">
+                Si es estudiante de la Facultad de Ingeniería, regístrese e inicie sesión para obtener funciones exclusivas
+              </div>
+              <div className="terminosss">
+              Si es usted Aspirante a la facultad solo inicie sesión \No tendrá funciones exclusivas\ 
+              </div>
         <br/>
         <hr/>
         <footer>
           <div>
-            <h6 style={{color:'#bb2929'}}>
+            <div style={{color:'#bb2929'}} className="terminospt">
               Terminos y condiciones:
-            </h6>
-            <div>
+            </div>
+            <div className="terminosss">
               Al registrarse usted, haciendo uso de su correo institucional proporcionado por la Facultad de Ingeniería de la Universidad de San carlos de Guatemala
-              <div>
+              <div className="terminosss">
                 Se compromete a:
               </div>
-              · Proporcionar información verídica en cuanto a Aportes a los Administradores de la página
+                <div className="terminosss">
+                · Proporcionar información verídica en cuanto a Aportes a los Administradores de la página
+                </div>
+                <div className="terminosss">
+                · Ajustarse a Normas de convivencia que relacionen a los Aspirantes y resolución de dudas
+                </div>
+                <div className="terminosss">
+                · No hacer uso de términos ofensivos, de lo contrario será excluido del uso de la red social
+                </div>
             </div>
           </div>
         </footer>

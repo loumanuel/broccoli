@@ -4,7 +4,6 @@
   src: url(./BurbankBigRegular-Black.otf);
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -71,6 +70,12 @@ img{
   font-size: 0.8em;
 }
 
+.terminosss{
+  font-size: 12px;
+}
+h6.terminospt{
+  font-size: 14px;
+}
 .login{
   width: 100%;
   padding-top: 0.5%;
