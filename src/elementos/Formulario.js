@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 const colores = {
-    borde: "#495464",
+    borde: "#0075FF",
     error: "#bb2929",
     exito: "#1ed12d"
 }
@@ -21,6 +21,11 @@ const Label = styled.label`
     padding: 10px;
     min-height: 40px;
     cursor: pointer;
+    text-align: left;
+
+    ${props => props.valido === 'false' && css`
+        color: ${colores.error};
+    `}
 `;
 
 const GrupoInput = styled.div`
@@ -40,18 +45,32 @@ const Input = styled.input`
     transition: .3s ease all;
     border: 1px solid transparent;
     &:focus{
-        border: 0.1px solid ${colores.borde};
+        border: 2px solid ${colores.borde};
         outline: none;
         box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
     }
+
+    ${props => props.valido === 'true' && css`
+        border: 2px solid transparent;
+    `}
+    ${props => props.valido === 'false' && css`
+        border: 3px solid ${colores.error} !important;
+    `}
 `;
 
 const LeyendaError = styled.p`
     font-size: 12px;
     margin-bottom: 0;
     color: ${colores.error};
-    /* display: none; */
-    
+    text-align: right;
+    display: none;
+
+    ${props => props.valido === 'true' && css`
+        display: none;
+    `}
+    ${props => props.valido === 'false' && css`
+        display: block;
+    `}
 `;
 
 const IconoValidacion = styled(FontAwesomeIcon)`
@@ -60,13 +79,21 @@ const IconoValidacion = styled(FontAwesomeIcon)`
     bottom: 30%;
     z-index: 100;
     font-size: 100%;
-    /* opacity: 0; */
+    opacity: 0;
+    ${props => props.valido === 'false' && css`
+        opacity: 1;
+        color: ${colores.error};
+    `}
+    ${props => props.valido === 'true' && css`
+        opacity: 1;
+        color: ${colores.exito};
+    `}
 `;
 
 const MensajeExito = styled.p`
 font-size: 14px;
 color: ${colores.exito};
-/* display: none; */
+display: none;
 `;
 
 const MensajeError = styled.p`

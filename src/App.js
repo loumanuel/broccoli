@@ -7,14 +7,59 @@ import Team from './pages/Team';
 
 /*--------------------------------*/
 
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faEnvelope, faUnlock, faTimesCircle, faExclamationTriangle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
-import {Formulario, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion} from "./Formulario";
+import {Formulario, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion} from "./elementos/Formulario";
+import InputAll from './components/Input'
+
 
 /*--------------------------------*/
+
+const Formm = () => {
+  // const [usuario, cambiarUsuario] = useState({campo:'', valido: null});
+  // const [nombre, cambiarNombre] = useState({campo:'', valido: null});
+  const [password, cambiarPassword] = useState({campo:'', valido: null});
+  const [correo, cambiarCorreo] = useState({campo:'', valido: null});
+
+  const expresiones = {
+    // usuario: /^[a-zA-Z0-9\_\-]{4,10}$/, // Letras, numeros, guion y guion_bajo
+    // nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+    password: /^.{9}$/, // 4 a 12 digitos.
+    correo: /^\d{13}@[i]+[n]+[g][e]+[n]+[i]+[e]+[r]+[i]+[a]+\.[u]+[s]+[a]+[c]+\.[e]+[d]+[u]+\.[g]+[t]+$/,
+    // telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+  }
+
+  return(
+    <main>
+          <Formulario action="">
+            <InputAll
+              estado={correo}
+              cambiarEstado={cambiarCorreo}
+              tipo="email"
+              label="Correo Electrónico"
+              placeholder="@ingenieria.usac.edu.gt"
+              name="correo"
+              leyendaError="Debe introducir su correo institucional"
+              expresionRegular={expresiones.correo}
+            />
+            <InputAll
+              estado={password}
+              cambiarEstado={cambiarPassword}
+              tipo="password"
+              label="Contraseña"
+              placeholder="Contraseña"
+              name="contraseña"
+              leyendaError="La contraseña debe tener 9 dígitos"
+              expresionRegular={expresiones.password}
+            />
+          </Formulario>
+        </main>
+  )
+
+  }
 
 class App extends Component {
 
@@ -24,27 +69,28 @@ class App extends Component {
       hecho:false,
       usuario:'',
       errorMensaje:'',
-      pestanas:''
+      nombre:''
     }
   }
-  
+
+   
   logIn = () => {
     this.setState({
       hecho:true,
       usuario:this.usuario.value,
-      correo:this.correo.value
+      nombre:this.nombre.value
     })
   }
 
   logOut = () => {
     this.setState({
       hecho:false,
-      usuario:''
+      usuario:'',
+      nombre:''
     })
   }
 
   render() {
-    let perfil, historia, vocacionales, destacados
     if (this.state.hecho)
       return(
         <Router>
@@ -61,7 +107,7 @@ class App extends Component {
           <h3 className="perfil">Mi perfil</h3>
           <p>Muchas gracias por resgistrarte</p>
           <p>Tu nombre de usuario es: <b>{this.state.usuario}</b></p>
-          <p>Tu correo electrónico es: <b>{this.state.correo}</b></p>
+          <p>Tu Nombre es: <b>{this.state.nombre}</b></p>
           <footer>
             <div className='btn-group pb-3'>
               <a className="btn btn-outline-dark" onClick={this.logOut}>
@@ -72,62 +118,34 @@ class App extends Component {
     </Router>
       );
     return (
-      <div className='registro container border rounded p-3 mt-4'>
+      <div className='registro container p-3 mt-4'>
       <h2>REGISTRO</h2>
-      <form>
-
-        <main>
+      <main>
           <Formulario action="">
             <div>
-            <Label htmlFor="nombre">Usuario</Label>
+            <Label htmlFor="user">Usuario</Label>
               <GrupoInput>
-              <Input type="text" placeholder="Usuario" id="nombre"></Input>
-              <IconoValidacion icon={faCheckCircle}/>
+              <Input type="text" placeholder="Usuario" id="user" ref={input => this.usuario = input}></Input>
+              <IconoValidacion icon={faUser}/>
               </GrupoInput>
-              <p>
+              <LeyendaError>
                 Lorem ipsum sit amet
-              </p>
+              </LeyendaError>
+            </div>
+            <div>
+            <Label htmlFor="nombre">Nombre</Label>
+              <GrupoInput>
+              <Input type="text" placeholder="Usuario" id="nombre" ref={input => this.nombre = input}></Input>
+              <IconoValidacion icon={faUser}/>
+              </GrupoInput>
+              <LeyendaError>
+                Lorem ipsum sit amet
+              </LeyendaError>
             </div>
           </Formulario>
         </main>
-
-      <LeyendaError className="textoleyenda">
-          Nombre de usuario inválido
-        </LeyendaError>
-        <div className="input-group pb-3">
-          <div className="input-group-prepend icon">
-            <span className="input-group-text">
-            <i  className= "fa-fw"><FontAwesomeIcon icon={faUser}/></i></span>
-          </div>
-          <Input id='usuario' className="form-control" 
-          type="text" placeholder="Usuario"
-          ref={input => this.usuario = input}/>
-        </div>
-        <LeyendaError className="textoleyenda">
-        Dirección de correo inválida
-        </LeyendaError>
-        <div className="input-group pb-3">
-          <div className="input-group-prepend">
-            <span className="input-group-text">
-            <i className= "fa-fw"><FontAwesomeIcon icon={faEnvelope}/></i></span>
-          </div>
-          <Input id='correo' className="form-control" 
-          type="text" placeholder="Correo Electrónico Institucional"
-          ref={input => this.correo = input}/>
-        </div>
-        <LeyendaError className="textoleyenda">
-        La contraseña debe contener 7 caracteres
-        </LeyendaError>
-        <div className="input-group pb-3">
-          <div className="input-group-prepend">
-            <span className="input-group-text">
-            <i className="fa-fw"><FontAwesomeIcon icon={faUnlock}/></i></span>
-          </div>
-          <Input id='clave'className="form-control" 
-          type="password" placeholder="Contraseña"
-          ref={input => this.clave = input}/>
-        </div>
-        <div className="btn-group pb-3 registroinicio">
+        <Formm></Formm>
+        <div className="btn-group pb-3 registroinicio mt-4">
           <a className="btn btn-outline-dark"  onClick={this.logIn}>
           <i></i>Iniciar sesión</a>
         </div>
@@ -137,7 +155,7 @@ class App extends Component {
         </div>
         {false &&<MensajeError className="border rounded p-6 mt-8">
           <p>
-            <FontAwesomeIcon icon={faExclamationTriangle}/>
+            <IconoValidacion icon={faExclamationTriangle}/>
             <b>Error:</b> Por favor rellena el formulario correctamente
           </p>
         </MensajeError>}
@@ -146,7 +164,6 @@ class App extends Component {
             Formulario enviado exitosamente!
           </p>
         </MensajeExito>
-      </form>
       </div>
     );
   }
