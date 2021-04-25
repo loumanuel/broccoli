@@ -90,17 +90,55 @@ const IconoValidacion = styled(FontAwesomeIcon)`
     `}
 `;
 
+const ContenedorTerminos = styled.div`
+    grid-column: span 2;
+    input{
+        margin-right: 10px;
+    }
+    @media(max-width: 800px){
+        grid-column: span 1;
+    }
+`;
+
+const ContenedorBotonCentrado = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 2;
+    @media(max-width: 800px){
+        grid-column: span 1;
+    }
+`;
+
+const Boton = styled.button`
+    height: 45px;
+    line-height: 45px;
+    width: 140px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+
+    &:hover {
+        box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+    }
+`;
+
 const MensajeExito = styled.p`
 font-size: 14px;
 color: ${colores.exito};
-display: none;
+/* display: none; */
 `;
 
-const MensajeError = styled.p`
+const MensajeError = styled.div`
     height: 40px;
+    font-size: 14px;
     line-height: 40px;
     background: #F66060;
-    padding: opx 15px;
+    padding: 0px 15px;
     border-radius: 3px;
     grid-column: span 2;
     p {
@@ -108,6 +146,65 @@ const MensajeError = styled.p`
     }
     b{
         margin-left: 1.2%;
+    }
+    @media(max-width: 800px){
+        grid-column: span 1;
+    }
+    @media(max-width: 550px){
+        grid-column: span 1;
+        font-size: 85%;
+    }
+    @media(max-width: 500px){
+        grid-column: span 1;
+        font-size: 80%;
+    }
+    @media(max-width: 450px){
+        grid-column: span 1;
+        font-size: 75%;
+    }
+    @media(max-width: 400px){
+        grid-column: span 1;
+        font-size: 70%;
+    }
+    @media(max-width: 375px){
+        grid-column: span 1;
+        font-size: 65%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 350px){
+        grid-column: span 1;
+        font-size: 60%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 325px){
+        grid-column: span 1;
+        font-size: 50%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 300px){
+        grid-column: span 1;
+        font-size: 50%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 275px){
+        grid-column: span 1;
+        font-size: 45%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 260px){
+        grid-column: span 1;
+        font-size: 40%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 250px){
+        grid-column: span 1;
+        font-size: 35%;
+        padding: 0px 10px;
+    }
+    @media(max-width: 235px){
+        grid-column: span 1;
+        font-size: 30%;
+        padding: 0px 5px;
     }
 `;
 
@@ -118,5 +215,8 @@ export {Formulario,
         LeyendaError,
         MensajeExito,
         MensajeError,
-        IconoValidacion
+        IconoValidacion,
+        ContenedorBotonCentrado,
+        Boton,
+        ContenedorTerminos
     };

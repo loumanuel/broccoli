@@ -12,7 +12,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faEnvelope, faUnlock, faTimesCircle, faExclamationTriangle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
-import {Formulario, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion} from "./elementos/Formulario";
+import {Formulario, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
 import InputAll from './components/Input'
 
 
@@ -23,6 +23,8 @@ const Formm = () => {
   // const [nombre, cambiarNombre] = useState({campo:'', valido: null});
   const [password, cambiarPassword] = useState({campo:'', valido: null});
   const [correo, cambiarCorreo] = useState({campo:'', valido: null});
+  const [terminos, cambiarTerminos] = useState(false);
+  const [formularioValido, cambiarFormularioValido] = useState(null);
 
   const expresiones = {
     // usuario: /^[a-zA-Z0-9\_\-]{4,10}$/, // Letras, numeros, guion y guion_bajo
@@ -32,9 +34,29 @@ const Formm = () => {
     // telefono: /^\d{7,14}$/ // 7 a 14 numeros.
   }
 
+  const onChangeTerminos = (e) => {
+    cambiarTerminos(e.target.checked)
+  }
+
+  const onSubmit = (e) =>{
+    e.preventDefault();
+
+    if(correo.valido === 'true' &&
+    password.valido === 'true' &&
+    terminos
+    ){
+      cambiarFormularioValido(true);
+      cambiarCorreo({campo:'', valido:null});
+      cambiarPassword({campo:'', valido:null});
+      cambiarTerminos(false);
+    } else{
+      cambiarFormularioValido(false);
+    }
+  }
+
   return(
     <main>
-          <Formulario action="">
+          <Formulario action="" onSubmit={onSubmit}>
             <InputAll
               estado={correo}
               cambiarEstado={cambiarCorreo}
@@ -42,7 +64,7 @@ const Formm = () => {
               label="Correo Electrónico"
               placeholder="@ingenieria.usac.edu.gt"
               name="correo"
-              leyendaError="Debe introducir su correo institucional"
+              leyendaError="Debe introducir su Correo Electrónico Institucional"
               expresionRegular={expresiones.correo}
             />
             <InputAll
@@ -52,9 +74,35 @@ const Formm = () => {
               label="Contraseña"
               placeholder="Contraseña"
               name="contraseña"
-              leyendaError="La contraseña debe tener 9 dígitos"
+              leyendaError="La contraseña debe ser su Número de Registro Académico"
               expresionRegular={expresiones.password}
             />
+            <ContenedorTerminos>
+              <Label>
+                <input
+                type="checkbox"
+                name="terminos"
+                id="terminos"
+                checked={terminos}
+                onChange={onChangeTerminos}
+                />
+                Acepto los Términos y Condiciones
+              </Label>
+            </ContenedorTerminos>
+            {formularioValido === false &&<MensajeError>
+              <p>
+                <FontAwesomeIcon icon={faExclamationTriangle}/>
+                <b>Error:</b> Por favor rellena el formulario correctamente
+              </p>
+            </MensajeError>}
+            <ContenedorBotonCentrado>
+            <Boton type="submit" onClick="">Registrarse</Boton>
+              {formularioValido === true &&<MensajeExito>
+                <p style={{paddingTop:'10px'}}>
+                  Formulario enviado exitosamente!
+                </p>
+              </MensajeExito>}
+            </ContenedorBotonCentrado>
           </Formulario>
         </main>
   )
@@ -109,18 +157,19 @@ class App extends Component {
           <p>Tu nombre de usuario es: <b>{this.state.usuario}</b></p>
           <p>Tu Nombre es: <b>{this.state.nombre}</b></p>
           <footer>
-            <div className='btn-group pb-3'>
-              <a className="btn btn-outline-dark" onClick={this.logOut}>
-              <i className="fa fa-user fa-fw"></i>Cerrar sesión</a>
-            </div>
+          <ContenedorBotonCentrado>
+          <Boton  onClick={this.logOut}>
+          Cerrar sesión</Boton>
+        </ContenedorBotonCentrado>
           </footer>
         </div>
     </Router>
       );
     return (
       <div className='registro container p-3 mt-4'>
-      <h2>REGISTRO</h2>
+      <h2>REGISTRATE E INICIA SESION</h2>
       <main>
+          <Formm></Formm>
           <Formulario action="">
             <div>
             <Label htmlFor="user">Usuario</Label>
@@ -142,28 +191,30 @@ class App extends Component {
                 Lorem ipsum sit amet
               </LeyendaError>
             </div>
+            <ContenedorBotonCentrado>
+          <Boton  onClick={this.logIn}>
+          Iniciar sesión</Boton>
+        </ContenedorBotonCentrado>
           </Formulario>
         </main>
-        <Formm></Formm>
-        <div className="btn-group pb-3 registroinicio mt-4">
-          <a className="btn btn-outline-dark"  onClick={this.logIn}>
-          <i></i>Iniciar sesión</a>
-        </div>
-        <div className='btn-group pb-3 alerta'>
-          <a className="btn btn-outline-warning" onClick={this.AlertaAspirantes}>
-          <i></i>Crear una nueva cuenta</a>
-        </div>
-        {false &&<MensajeError className="border rounded p-6 mt-8">
-          <p>
-            <IconoValidacion icon={faExclamationTriangle}/>
-            <b>Error:</b> Por favor rellena el formulario correctamente
-          </p>
-        </MensajeError>}
-        <MensajeExito className="border rounded p-6 mt-8">
-          <p>
-            Formulario enviado exitosamente!
-          </p>
-        </MensajeExito>
+        <br/>
+        <br/>
+        <br/>
+        <hr/>
+        <footer>
+          <div>
+            <h6 style={{color:'#bb2929'}}>
+              Terminos y condiciones:
+            </h6>
+            <div>
+              Al registrarse usted, haciendo uso de su correo institucional proporcionado por la Facultad de Ingeniería de la Universidad de San carlos de Guatemala
+              <div>
+                Se compromete a:
+              </div>
+              · Proporcionar información verídica en cuanto a Aportes a los Administradores de la página
+            </div>
+          </div>
+        </footer>
       </div>
     );
   }
