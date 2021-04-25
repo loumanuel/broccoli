@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/broccoli/static/css/main.ff46506c.chunk.css",
-    "main.js": "/broccoli/static/js/main.7428df32.chunk.js",
-    "main.js.map": "/broccoli/static/js/main.7428df32.chunk.js.map",
+    "main.js": "/broccoli/static/js/main.27eb4155.chunk.js",
+    "main.js.map": "/broccoli/static/js/main.27eb4155.chunk.js.map",
     "runtime-main.js": "/broccoli/static/js/runtime-main.c2e68dbf.js",
     "runtime-main.js.map": "/broccoli/static/js/runtime-main.c2e68dbf.js.map",
     "static/css/2.371ae490.chunk.css": "/broccoli/static/css/2.371ae490.chunk.css",
-    "static/js/2.8fe0e6ee.chunk.js": "/broccoli/static/js/2.8fe0e6ee.chunk.js",
-    "static/js/2.8fe0e6ee.chunk.js.map": "/broccoli/static/js/2.8fe0e6ee.chunk.js.map",
+    "static/js/2.5bfcef08.chunk.js": "/broccoli/static/js/2.5bfcef08.chunk.js",
+    "static/js/2.5bfcef08.chunk.js.map": "/broccoli/static/js/2.5bfcef08.chunk.js.map",
     "index.html": "/broccoli/index.html",
     "static/css/2.371ae490.chunk.css.map": "/broccoli/static/css/2.371ae490.chunk.css.map",
     "static/css/main.ff46506c.chunk.css.map": "/broccoli/static/css/main.ff46506c.chunk.css.map",
-    "static/js/2.8fe0e6ee.chunk.js.LICENSE.txt": "/broccoli/static/js/2.8fe0e6ee.chunk.js.LICENSE.txt",
+    "static/js/2.5bfcef08.chunk.js.LICENSE.txt": "/broccoli/static/js/2.5bfcef08.chunk.js.LICENSE.txt",
     "static/media/App.css": "/broccoli/static/media/BurbankBigRegular-Black.18921e4a.otf",
     "static/media/usac.3f43267a.png": "/broccoli/static/media/usac.3f43267a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c2e68dbf.js",
     "static/css/2.371ae490.chunk.css",
-    "static/js/2.8fe0e6ee.chunk.js",
+    "static/js/2.5bfcef08.chunk.js",
     "static/css/main.ff46506c.chunk.css",
-    "static/js/main.7428df32.chunk.js"
+    "static/js/main.27eb4155.chunk.js"
   ]
 }
