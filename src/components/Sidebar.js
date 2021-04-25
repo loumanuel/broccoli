@@ -6,6 +6,7 @@ import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
+import usac from './usac.png';
 
 const Nav = styled.div`
   background: #15171c;
@@ -26,7 +27,7 @@ const NavIcon = styled(Link)`
 
 const SidebarNav = styled.nav`
   background: #15171c;
-  width: 250px;
+  width: 300px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -53,12 +54,27 @@ const Sidebar = () => {
           <NavIcon to='#'>
             <FaIcons.FaBars onClick={showSidebar} />
           </NavIcon>
+          <div class="col-sm header">
+              <h1>
+                OASIS
+              </h1>
+            </div>
         </Nav>
         <SidebarNav sidebar={sidebar}>
           <SidebarWrap>
             <NavIcon to='#'>
               <AiIcons.AiOutlineClose onClick={showSidebar} />
             </NavIcon>
+            <div class="col p-3 mt-4">
+            <div class="col-sm">
+                <i><img src={usac} /></i>
+            </div>
+            <div class="col-sm header">
+              <h1>
+                OASIS
+              </h1>
+            </div>
+            </div>
             {SidebarData.map((item, index) => {
               return <SubMenu item={item} key={index} />;
             })}

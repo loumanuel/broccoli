@@ -26,7 +26,7 @@ const SidebarLabel = styled.span`
 
 const DropdownLink = styled(Link)`
   background: #414757;
-  height: 60px;
+  height: 70px;
   padding-left: 3rem;
   display: flex;
   align-items: center;
@@ -64,7 +64,7 @@ const SubMenu = ({ item }) => {
         item.subNav.map((item, index) => {
           return (
             <DropdownLink to={item.path} key={index}>
-              {item.icon}
+             <i> {item.icon}</i>
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownLink>
           );

@@ -6,7 +6,7 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Overview',
+    title: 'cwdjniwdhbijdhbie',
     path: '/overview',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -26,7 +26,7 @@ export const SidebarData = [
     ]
   },
   {
-    title: 'Reports',
+    title: 'Información',
     path: '/reports',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -34,31 +34,31 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Reports',
+        title: 'PruebaS Vocacionales',
         path: '/reports/reports1',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 2',
+        title: 'Pruebas básicas',
         path: '/reports/reports2',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Reports 3',
+        title: 'Exámenes específicos',
         path: '/reports/reports3',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Products',
+    title: 'Historia USAC',
     path: '/products',
-    icon: <FaIcons.FaCartPlus />
+    icon: <FaIcons.FaPaperclip />
   },
   {
-    title: 'Team',
+    title: 'Estudiantes Destacados',
     path: '/team',
     icon: <IoIcons.IoMdPeople />
   },

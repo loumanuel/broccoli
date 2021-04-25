@@ -38,7 +38,14 @@ body{
 
 div.header{
   /* color:rgba(144, 142, 164, 0.4); */
-  padding-top: 0.8%;
+  padding-top: 1.2%;
+  /* color: red; */
+}
+
+div.headerhome{
+  /* color:rgba(144, 142, 164, 0.4); */
+  padding-top: 1.2%;
+  /* color: red; */
 }
 
 img{
@@ -61,6 +68,7 @@ img{
   align-items: center;
   padding: 1px;
   width: 100%;
+  font-size: 0.8em;
 }
 
 .login{
