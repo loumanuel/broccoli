@@ -133,6 +133,15 @@ color: ${colores.exito};
 /* display: none; */
 `;
 
+const FooterAll = styled.div`
+background-color: #fff;
+    color: #000;
+    padding: 2em;
+    /* display: flex; */
+    /* flex-direction:column; */
+    margin-top: auto;
+`;
+
 const MensajeError = styled.div`
     height: 40px;
     font-size: 14px;
@@ -218,5 +227,6 @@ export {Formulario,
         IconoValidacion,
         ContenedorBotonCentrado,
         Boton,
-        ContenedorTerminos
+        ContenedorTerminos,
+        FooterAll
     };

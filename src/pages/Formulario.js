@@ -212,13 +212,14 @@ const BotonDestacados = styled.button`
     height: 70px;
     line-height: 45px;
     width: 100%;
-    background-color: #bbbbbb;
+    background-color: #f2dcbb;
     color: #272121;
     font-weight: bold;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     transition: .1s ease all;
+    padding-top: 12px;
 
     &:hover {
         box-shadow: 3px 0px 30px rgba(163,163,163, 1);

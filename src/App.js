@@ -1,9 +1,10 @@
 import './App.css';
 import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Overview from './pages/Overview';
+import {Overview, MiPerfil, AmigosAgregar} from './pages/Overview';
 import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './pages/Reports';
 import Team from './pages/Team';
+import usuarioicono from './usuarioicono.png';
 
 /*--------------------------------*/
 
@@ -12,8 +13,11 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faEnvelope, faUnlock, faTimesCircle, faExclamationTriangle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
-import {Formulario, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
+import {Formulario, FooterAll, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
 import InputAll from './components/Input'
+import { Historia } from './pages/Historia';
+import { Messages, MessagesTwo, MessaggesOne } from './pages/Messages';
+import { Support } from './pages/Support';
 
 
 /*--------------------------------*/
@@ -142,27 +146,38 @@ class App extends Component {
     if (this.state.hecho)
       return(
         <Router>
+      <div class="col-sm">
       <Sidebar />
       <Switch>
         <Route path='/overview' exact component={Overview} />
+        <Route path='/overview/user' exact component={MiPerfil} />
+        <Route path='/overview/agregar' exact component={AmigosAgregar} />
+        <Route path='/historia' exact component={Historia} />
+        <Route path='/messages' exact component={Messages} />
+        <Route path='/messages/message1' exact component={MessaggesOne} />
+        <Route path='/messages/message2' exact component={MessagesTwo} />
         <Route path='/reports' exact component={Reports} />
         <Route path='/reports/reports1' exact component={ReportsOne} />
         <Route path='/reports/reports2' exact component={ReportsTwo} />
         <Route path='/reports/reports3' exact component={ReportsThree} />
+        <Route path='/support' exact component={Support} />
         <Route path='/team' exact component={Team} />
       </Switch>
-      <div className='registro container border rounded p-3 mt-4'>
-          <h3 className="perfil">Mi perfil</h3>
-          <p>Muchas gracias por resgistrarte</p>
-          <p>Tu nombre de usuario es: <b>{this.state.usuario}</b></p>
-          <p>Tu Nombre es: <b>{this.state.nombre}</b></p>
-          <footer>
+      </div>
+      <FooterAll >
+          <div class="col-sm">
+            <i><img src={usuarioicono} style={{width:'12%'}} /></i>
+          </div>
+            <div class="col-sm p-3">
+            <h3 className="perfil"><b>{this.state.nombre}</b></h3>
+            user: {this.state.usuario}
+            </div>
           <ContenedorBotonCentrado>
           <Boton  onClick={this.logOut}>
           Cerrar sesión</Boton>
         </ContenedorBotonCentrado>
-          </footer>
-        </div>
+        <br/>
+        </FooterAll>
     </Router>
       );
     return (
@@ -174,22 +189,16 @@ class App extends Component {
             <div>
             <Label htmlFor="user">Usuario</Label>
               <GrupoInput>
-              <Input type="text" placeholder="Usuario" id="user" ref={input => this.usuario = input}></Input>
+              <Input type="text" placeholder="manuel_dm" id="user" ref={input => this.usuario = input}></Input>
               <IconoValidacion icon={faUser}/>
               </GrupoInput>
-              <LeyendaError>
-                Lorem ipsum sit amet
-              </LeyendaError>
             </div>
             <div>
             <Label htmlFor="nombre">Nombre</Label>
               <GrupoInput>
-              <Input type="text" placeholder="Usuario" id="nombre" ref={input => this.nombre = input}></Input>
+              <Input type="text" placeholder="Pablo Nevarez" id="nombre" ref={input => this.nombre = input}></Input>
               <IconoValidacion icon={faUser}/>
               </GrupoInput>
-              <LeyendaError>
-                Lorem ipsum sit amet
-              </LeyendaError>
             </div>
             <ContenedorBotonCentrado>
           <Boton  onClick={this.logIn}>

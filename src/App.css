@@ -24,12 +24,16 @@
   text-decoration: none;
 }
 
+html{
+  height: 100%;
+}
 
 body{
   /* font-family: 'Open Sans', sans-serif; */
   /* font-family: 'Dela Gothic One', cursive; */
   font-family:'fortnite';
   text-decoration: none;
+  min-height: 100%;
   /* font-family: 'Monofonto'; */
 }
 

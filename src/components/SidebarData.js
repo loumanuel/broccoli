@@ -6,7 +6,7 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'cwdjniwdhbijdhbie',
+    title: 'Inicio',
     path: '/overview',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -15,12 +15,12 @@ export const SidebarData = [
     subNav: [
       {
         title: 'Mi perfil',
-        path: '/overview/users',
+        path: '/overview/user',
         icon: <IoIcons.IoIosPaper />
       },
       {
         title: 'Amigos/Agregar',
-        path: '/overview/revenue',
+        path: '/overview/agregar',
         icon: <IoIcons.IoIosPaper />
       }
     ]
@@ -54,7 +54,7 @@ export const SidebarData = [
   },
   {
     title: 'Historia USAC',
-    path: '/products',
+    path: '/historia',
     icon: <FaIcons.FaPaperclip />
   },
   {
