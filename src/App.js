@@ -11,9 +11,9 @@ import usuarioicono from './usuarioicono.png';
 import React, { Component, useState } from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faUser, faEnvelope, faUnlock, faTimesCircle, faExclamationTriangle, faCheckCircle} from '@fortawesome/free-solid-svg-icons'
+import {faUser, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
-import {Formulario, FooterAll, Input, LeyendaError, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
+import {Formulario, FooterAll, Input, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
 import InputAll from './components/Input'
 import { Historia } from './pages/Historia';
 import { Messages, MessagesTwo, MessaggesOne } from './pages/Messages';

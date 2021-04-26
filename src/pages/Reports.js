@@ -1,5 +1,5 @@
 import React from 'react';
-import {Formulario, ContenedorBotonCentrado, BotonDestacados} from './Formulario'
+import {ContenedorBotonCentrado, BotonDestacados} from './Formulario'
 import './estilos.css'
 
 export const Reports = () => {
