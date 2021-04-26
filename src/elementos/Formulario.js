@@ -111,16 +111,16 @@ const ContenedorBotonCentrado = styled.div`
 `;
 
 const Boton = styled.button`
-    height: 45px;
+    height: 50px;
     line-height: 45px;
-    width: 140px;
+    width: 170px;
     background-color: #000;
     color: #fff;
-    font-weight: bold;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     transition: .1s ease all;
+    font-size:20px;
 
     &:hover {
         box-shadow: 3px 0px 30px rgba(163,163,163, 1);
@@ -217,6 +217,23 @@ const MensajeError = styled.div`
     }
 `;
 
+const Divide = styled.div`
+    display: inline-block;
+    /* grid-template-columns: 1fr 1fr; */
+    width: 50%;
+    padding-top: 3%;
+    @media (max-width: 800px){
+        /* grid-template-columns: 1fr; */
+        width: 90%;
+        padding-top: 3%;
+    }
+    @media (max-width: 600px){
+        /* grid-template-columns: 1fr; */
+        width: 90%;
+        padding-top: 4%;
+    }
+`;
+
 export {Formulario,
         Label,
         GrupoInput,
@@ -228,5 +245,6 @@ export {Formulario,
         ContenedorBotonCentrado,
         Boton,
         ContenedorTerminos,
-        FooterAll
+        FooterAll,
+        Divide,
     };

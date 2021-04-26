@@ -1,6 +1,10 @@
 import React from 'react';
-import {ContenedorBotonCentrado, BotonDestacados} from './Formulario'
+import {ContenedorBotonCentrado, BotonDestacados, Divide} from './Formulario'
 import './estilos.css'
+import userman from './userman.png';
+import userwoman from './userwoman.png';
+import nuevo from './nuevo.jpg';
+import chat from './chat.png'
 
 
 export const Overview = () => {
@@ -156,16 +160,113 @@ export const Overview = () => {
 
 export const MiPerfil = () => {
   return (
-    <ContenedorBotonCentrado>
+    <div>
+      <ContenedorBotonCentrado>
         <BotonDestacados type="submit" style={{backgroundColor:'#bbbbbb'}} ><h2>MI PERFIL</h2></BotonDestacados>
+        <Divide>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>¿EN QUÉ PIENSAS?</h2></BotonDestacados>
+        </Divide>
       </ContenedorBotonCentrado>
+      <div>
+        <Divide>
+          <div class="col-sm">
+            <img src={nuevo} style={{width:'20%'}} />
+          </div>
+          <div className="col-sm p-3">
+          </div>
+          <BotonDestacados type="submit" style={{backgroundColor:'#1b262c', width: '80%', color:'white'}} ><h2>AGREGAR NUEVA FOTO</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={chat} style={{width:'25%'}} />
+          </div>
+          <div className="col-sm p-3">
+          </div>
+          <BotonDestacados type="submit" style={{backgroundColor:'#1b262c', width: '80%', color:'white'}} ><h2>NUEVA CONVERSACIÓN</h2></BotonDestacados>
+        </Divide>
+      </div>
+    </div>
   );
 };
 
 export const AmigosAgregar = () => {
   return (
-    <ContenedorBotonCentrado>
+      <div>
+        <ContenedorBotonCentrado>
         <BotonDestacados type="submit" style={{backgroundColor:'#bbbbbb'}} ><h2>AMIGOS/AGREGAR</h2></BotonDestacados>
-      </ContenedorBotonCentrado>
+        </ContenedorBotonCentrado>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-2">
+            STEVEN FACUNDO
+          </h4>
+        <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userwoman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-2">
+            FAVIOLA RAMOS
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            WALTER CASIA
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            JONATHAN ALVAREZ
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            LUIS CASTELLANOS
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            JUSTY RODRÍGUEZ
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            DENIS CORONADO
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+        <Divide>
+          <div class="col-sm">
+            <img src={userwoman} style={{width:'25%'}} />
+          </div>
+          <h4 className="col-sm p-3">
+            LOURDES MANUEL
+          </h4>
+          <BotonDestacados type="submit" style={{backgroundColor:'#f7ea00', width: '80%'}} ><h2>AGREGAR A AMIGOS</h2></BotonDestacados>
+        </Divide>
+      </div>
   );
 };

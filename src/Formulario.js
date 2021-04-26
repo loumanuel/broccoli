@@ -84,6 +84,23 @@ const MensajeError = styled.p`
     }
 `;
 
+const Divide = styled.div`
+    display: inline-block;
+    /* grid-template-columns: 1fr 1fr; */
+    width: 50%;
+    padding-top: 3%;
+    @media (max-width: 800px){
+        /* grid-template-columns: 1fr; */
+        width: 90%;
+        padding-top: 3%;
+    }
+    @media (max-width: 600px){
+        /* grid-template-columns: 1fr; */
+        width: 90%;
+        padding-top: 4%;
+    }
+`
+
 export {Formulario,
         Label,
         GrupoInput,
@@ -91,5 +108,6 @@ export {Formulario,
         LeyendaError,
         MensajeExito,
         MensajeError,
-        IconoValidacion
+        IconoValidacion,
+        Divide
     };

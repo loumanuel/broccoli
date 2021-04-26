@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {Overview, MiPerfil, AmigosAgregar} from './pages/Overview';
 import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './pages/Reports';
 import Team from './pages/Team';
-import usuarioicono from './usuarioicono.png';
+import usr from './usr.png';
 
 /*--------------------------------*/
 
@@ -13,7 +13,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser, faExclamationTriangle} from '@fortawesome/free-solid-svg-icons'
 import './App.css';
-import {Formulario, FooterAll, Input, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos} from "./elementos/Formulario";
+import {Formulario, FooterAll, Input, MensajeExito, MensajeError, Label, GrupoInput, IconoValidacion, ContenedorBotonCentrado, Boton, ContenedorTerminos, Divide} from "./elementos/Formulario";
 import InputAll from './components/Input'
 import { Historia } from './pages/Historia';
 import { Messages, MessagesTwo, MessaggesOne } from './pages/Messages';
@@ -100,7 +100,7 @@ const Formm = () => {
               </p>
             </MensajeError>}
             <ContenedorBotonCentrado>
-            <Boton type="submit" onClick="">Registrarse</Boton>
+            <Boton type="submit" onClick="">REGISTRARSE</Boton>
               {formularioValido === true &&<MensajeExito>
                 <p style={{paddingTop:'10px'}}>
                   Formulario enviado exitosamente!
@@ -165,16 +165,20 @@ class App extends Component {
       </Switch>
       </div>
       <FooterAll >
-          <div class="col-sm">
-            <i><img src={usuarioicono} style={{width:'12%'}} /></i>
+            <Divide>
+            <div class="col-sm">
+            <i><img src={usr}/></i>
           </div>
-            <div class="col-sm p-3">
+            </Divide>
+            <div>
             <h3 className="perfil"><b>{this.state.nombre}</b></h3>
-            user: {this.state.usuario}
+            <div className="p-3">
+            @_{this.state.usuario} 
+            </div>
             </div>
           <ContenedorBotonCentrado>
           <Boton  onClick={this.logOut}>
-          Cerrar sesión</Boton>
+          CERRAR SESIÓN</Boton>
         </ContenedorBotonCentrado>
         <br/>
         </FooterAll>
@@ -202,7 +206,7 @@ class App extends Component {
             </div>
             <ContenedorBotonCentrado>
           <Boton  onClick={this.logIn}>
-          Iniciar sesión</Boton>
+          INICIAR SESION</Boton>
         </ContenedorBotonCentrado>
           </Formulario>
         </main>
@@ -210,17 +214,17 @@ class App extends Component {
         <hr/>
           <div style={{color:'#bb2929'}}>Importante</div>
             <div className="terminosss">
-                Si es estudiante de la Facultad de Ingeniería, regístrese e inicie sesión para obtener funciones exclusivas
+                Si es usted estudiante de la Facultad de Ingeniería, regístrese e inicie sesión para obtener funciones exclusivas
               </div>
               <div className="terminosss">
-              Si es usted Aspirante a la facultad solo inicie sesión \No tendrá funciones exclusivas\ 
+              Si es usted Aspirante a la Facultad de Ingeniería solo inicie sesión \No tendrá funciones exclusivas\ 
               </div>
         <br/>
         <hr/>
         <footer>
           <div>
             <div style={{color:'#bb2929'}} className="terminospt">
-              Terminos y condiciones:
+              Términos y condiciones
             </div>
             <div className="terminosss">
               Al registrarse usted, haciendo uso de su correo institucional proporcionado por la Facultad de Ingeniería de la Universidad de San carlos de Guatemala

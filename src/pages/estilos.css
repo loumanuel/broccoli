@@ -1,14 +1,15 @@
 p{
-    text-align: left;
+    text-align: justify;
     margin: 2% 5%;
 }
 
-.cas{
-    display: flex;
-}
+
 html{
     height: 100%;
 }
 h3{
     padding-top: 1.8%;
+}
+.rose{
+    width: 50%;
 }
