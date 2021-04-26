@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/broccoli/static/css/main.1abce1fc.chunk.css",
-    "main.js": "/broccoli/static/js/main.a0b855b1.chunk.js",
-    "main.js.map": "/broccoli/static/js/main.a0b855b1.chunk.js.map",
+    "main.js": "/broccoli/static/js/main.dcd56083.chunk.js",
+    "main.js.map": "/broccoli/static/js/main.dcd56083.chunk.js.map",
     "runtime-main.js": "/broccoli/static/js/runtime-main.c2e68dbf.js",
     "runtime-main.js.map": "/broccoli/static/js/runtime-main.c2e68dbf.js.map",
     "static/css/2.371ae490.chunk.css": "/broccoli/static/css/2.371ae490.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.371ae490.chunk.css",
     "static/js/2.cc07bb34.chunk.js",
     "static/css/main.1abce1fc.chunk.css",
-    "static/js/main.a0b855b1.chunk.js"
+    "static/js/main.dcd56083.chunk.js"
   ]
 }
