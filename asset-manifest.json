@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/broccoli/static/css/main.1abce1fc.chunk.css",
-    "main.js": "/broccoli/static/js/main.e29c5db4.chunk.js",
-    "main.js.map": "/broccoli/static/js/main.e29c5db4.chunk.js.map",
+    "main.css": "/broccoli/static/css/main.18193f5b.chunk.css",
+    "main.js": "/broccoli/static/js/main.4ef1f22d.chunk.js",
+    "main.js.map": "/broccoli/static/js/main.4ef1f22d.chunk.js.map",
     "runtime-main.js": "/broccoli/static/js/runtime-main.c2e68dbf.js",
     "runtime-main.js.map": "/broccoli/static/js/runtime-main.c2e68dbf.js.map",
     "static/css/2.371ae490.chunk.css": "/broccoli/static/css/2.371ae490.chunk.css",
@@ -10,17 +10,18 @@
     "static/js/2.cc07bb34.chunk.js.map": "/broccoli/static/js/2.cc07bb34.chunk.js.map",
     "index.html": "/broccoli/index.html",
     "static/css/2.371ae490.chunk.css.map": "/broccoli/static/css/2.371ae490.chunk.css.map",
-    "static/css/main.1abce1fc.chunk.css.map": "/broccoli/static/css/main.1abce1fc.chunk.css.map",
+    "static/css/main.18193f5b.chunk.css.map": "/broccoli/static/css/main.18193f5b.chunk.css.map",
     "static/js/2.cc07bb34.chunk.js.LICENSE.txt": "/broccoli/static/js/2.cc07bb34.chunk.js.LICENSE.txt",
     "static/media/App.css": "/broccoli/static/media/BurbankBigRegular-Black.18921e4a.otf",
     "static/media/usac.3f43267a.png": "/broccoli/static/media/usac.3f43267a.png",
-    "static/media/usuarioicono.178d03ca.png": "/broccoli/static/media/usuarioicono.178d03ca.png"
+    "static/media/userman.e6efbee3.png": "/broccoli/static/media/userman.e6efbee3.png",
+    "static/media/userwoman.5d896e7f.png": "/broccoli/static/media/userwoman.5d896e7f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c2e68dbf.js",
     "static/css/2.371ae490.chunk.css",
     "static/js/2.cc07bb34.chunk.js",
-    "static/css/main.1abce1fc.chunk.css",
-    "static/js/main.e29c5db4.chunk.js"
+    "static/css/main.18193f5b.chunk.css",
+    "static/js/main.4ef1f22d.chunk.js"
   ]
 }
