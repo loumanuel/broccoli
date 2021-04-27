@@ -23,19 +23,15 @@ import { Support } from './pages/Support';
 /*--------------------------------*/
 
 const Formm = () => {
-  // const [usuario, cambiarUsuario] = useState({campo:'', valido: null});
-  // const [nombre, cambiarNombre] = useState({campo:'', valido: null});
   const [password, cambiarPassword] = useState({campo:'', valido: null});
   const [correo, cambiarCorreo] = useState({campo:'', valido: null});
   const [terminos, cambiarTerminos] = useState(false);
   const [formularioValido, cambiarFormularioValido] = useState(null);
 
   const expresiones = {
-    // usuario: /^[a-zA-Z0-9\_\-]{4,10}$/, // Letras, numeros, guion y guion_bajo
-    // nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+
     password: /^.{9}$/, // 4 a 12 digitos.
     correo: /^\d{13}@[i]+[n]+[g][e]+[n]+[i]+[e]+[r]+[i]+[a]+\.[u]+[s]+[a]+[c]+\.[e]+[d]+[u]+\.[g]+[t]+$/,
-    // telefono: /^\d{7,14}$/ // 7 a 14 numeros.
   }
 
   const onChangeTerminos = (e) => {
@@ -160,7 +156,7 @@ class App extends Component {
         <Route path='/reports/reports1' exact component={ReportsOne} />
         <Route path='/reports/reports2' exact component={ReportsTwo} />
         <Route path='/reports/reports3' exact component={ReportsThree} />
-        <Route path='/support' exact component={Support} />
+        <Route path='/creditos' exact component={Support} />
         <Route path='/team' exact component={Team} />
       </Switch>
       </div>

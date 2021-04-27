@@ -147,6 +147,10 @@ const MensajeError = styled.div`
     b{
         margin-left: 1.2%;
     }
+
+
+/* //////////////////////////////////////////////////////////// */
+
     @media(max-width: 800px){
         grid-column: span 1;
     }
@@ -209,7 +213,7 @@ const MensajeError = styled.div`
 `;
 
 const BotonDestacados = styled.button`
-    height: 70px;
+    height: 80px;
     line-height: 45px;
     width: 100%;
     background-color: #f2dcbb;

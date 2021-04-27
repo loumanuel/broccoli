@@ -246,5 +246,5 @@ export {Formulario,
         Boton,
         ContenedorTerminos,
         FooterAll,
-        Divide,
+        Divide
     };

@@ -6,7 +6,7 @@ import * as RiIcons from 'react-icons/ri';
 
 export const SidebarData = [
   {
-    title: 'Inicio',
+    title: 'INICIO',
     path: '/overview',
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -14,19 +14,19 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Mi perfil',
+        title: 'MI PERFIL',
         path: '/overview/user',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Amigos/Agregar',
+        title: 'AMIGOS/AGREGAR',
         path: '/overview/agregar',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Información',
+    title: 'INFORMACIÓN',
     path: '/reports',
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -34,36 +34,36 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Pruebas Vocacionales',
+        title: 'PRUEBAS VOCACIONALES',
         path: '/reports/reports1',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Pruebas básicas',
+        title: 'PRRUEBAS VOCACIONALES',
         path: '/reports/reports2',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
       },
       {
-        title: 'Exámenes específicos',
+        title: 'EXÁMENES ESPECÍFICOS',
         path: '/reports/reports3',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Historia USAC',
+    title: 'HISTORIA USAC',
     path: '/historia',
     icon: <FaIcons.FaPaperclip />
   },
   {
-    title: 'Estudiantes Destacados',
+    title: 'ESTUDIANTES DESTACADOS',
     path: '/team',
     icon: <IoIcons.IoMdPeople />
   },
   {
-    title: 'Messages',
+    title: 'MESSAGES',
     path: '/messages',
     icon: <FaIcons.FaEnvelopeOpenText />,
 
@@ -72,20 +72,20 @@ export const SidebarData = [
 
     subNav: [
       {
-        title: 'Message 1',
+        title: 'MESSAGE USERS',
         path: '/messages/message1',
         icon: <IoIcons.IoIosPaper />
       },
       {
-        title: 'Message 2',
+        title: 'MESSAGE GROUPS',
         path: '/messages/message2',
         icon: <IoIcons.IoIosPaper />
       }
     ]
   },
   {
-    title: 'Support',
-    path: '/support',
+    title: 'CRÉDITOS',
+    path: '/creditos',
     icon: <IoIcons.IoMdHelpCircle />
   }
 ];
