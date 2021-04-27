@@ -40,7 +40,7 @@ export const SidebarData = [
         cName: 'sub-nav'
       },
       {
-        title: 'PRRUEBAS VOCACIONALES',
+        title: 'PRRUEBAS BÁSICAS',
         path: '/reports/reports2',
         icon: <IoIcons.IoIosPaper />,
         cName: 'sub-nav'
