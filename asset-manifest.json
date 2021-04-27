@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/broccoli/static/css/main.18193f5b.chunk.css",
-    "main.js": "/broccoli/static/js/main.4ef1f22d.chunk.js",
-    "main.js.map": "/broccoli/static/js/main.4ef1f22d.chunk.js.map",
+    "main.css": "/broccoli/static/css/main.2252ca67.chunk.css",
+    "main.js": "/broccoli/static/js/main.40141809.chunk.js",
+    "main.js.map": "/broccoli/static/js/main.40141809.chunk.js.map",
     "runtime-main.js": "/broccoli/static/js/runtime-main.c2e68dbf.js",
     "runtime-main.js.map": "/broccoli/static/js/runtime-main.c2e68dbf.js.map",
     "static/css/2.371ae490.chunk.css": "/broccoli/static/css/2.371ae490.chunk.css",
@@ -10,18 +10,26 @@
     "static/js/2.cc07bb34.chunk.js.map": "/broccoli/static/js/2.cc07bb34.chunk.js.map",
     "index.html": "/broccoli/index.html",
     "static/css/2.371ae490.chunk.css.map": "/broccoli/static/css/2.371ae490.chunk.css.map",
-    "static/css/main.18193f5b.chunk.css.map": "/broccoli/static/css/main.18193f5b.chunk.css.map",
+    "static/css/main.2252ca67.chunk.css.map": "/broccoli/static/css/main.2252ca67.chunk.css.map",
     "static/js/2.cc07bb34.chunk.js.LICENSE.txt": "/broccoli/static/js/2.cc07bb34.chunk.js.LICENSE.txt",
     "static/media/App.css": "/broccoli/static/media/BurbankBigRegular-Black.18921e4a.otf",
+    "static/media/addcoment.aeeb004d.png": "/broccoli/static/media/addcoment.aeeb004d.png",
+    "static/media/denis.1b624a6c.jpeg": "/broccoli/static/media/denis.1b624a6c.jpeg",
+    "static/media/favi.b05cbfe1.jpg": "/broccoli/static/media/favi.b05cbfe1.jpg",
+    "static/media/josue.613b6f5d.jpg": "/broccoli/static/media/josue.613b6f5d.jpg",
+    "static/media/luis.f4e5bbfd.jpg": "/broccoli/static/media/luis.f4e5bbfd.jpg",
+    "static/media/mou.daa0d9fe.jpg": "/broccoli/static/media/mou.daa0d9fe.jpg",
+    "static/media/sebas.77e1a197.jpg": "/broccoli/static/media/sebas.77e1a197.jpg",
     "static/media/usac.3f43267a.png": "/broccoli/static/media/usac.3f43267a.png",
     "static/media/userman.e6efbee3.png": "/broccoli/static/media/userman.e6efbee3.png",
-    "static/media/userwoman.5d896e7f.png": "/broccoli/static/media/userwoman.5d896e7f.png"
+    "static/media/userwoman.5d896e7f.png": "/broccoli/static/media/userwoman.5d896e7f.png",
+    "static/media/walter.33154976.jpg": "/broccoli/static/media/walter.33154976.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c2e68dbf.js",
     "static/css/2.371ae490.chunk.css",
     "static/js/2.cc07bb34.chunk.js",
-    "static/css/main.18193f5b.chunk.css",
-    "static/js/main.4ef1f22d.chunk.js"
+    "static/css/main.2252ca67.chunk.css",
+    "static/js/main.40141809.chunk.js"
   ]
 }
