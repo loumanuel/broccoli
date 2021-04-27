@@ -1,7 +1,5 @@
 import React from 'react';
 import {ContenedorBotonCentrado, BotonDestacados, Divide} from './Formulario'
-import userman from './userman.png';
-import userwoman from './userwoman.png';
 import './estilos.css'
 import sebas from './sebas.jpg';
 import facundo from './facundo.jpeg';
@@ -11,7 +9,6 @@ import luis from './luis.jpg';
 import walter from './walter.jpg';
 import favi from './favi.jpg';
 import mou from './mou.jpg';
-import me from './me.jpg';
 
 
 
