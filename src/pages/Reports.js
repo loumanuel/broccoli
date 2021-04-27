@@ -66,7 +66,7 @@ export const ReportsOne = () => {
         <BotonDestacados type="submit" style={{backgroundColor:'#bbbbbb'}} ><h2>PRUEBAS DE ORIENTACION VOCACIONAL</h2></BotonDestacados>
       </ContenedorBotonCentrado>
       <p class="col-sm" className="p-3" style={{textAlign:'center'}}>
-              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos infromado!
+              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos informado!
               </p>
     </div>
   );
@@ -78,7 +78,7 @@ export const ReportsTwo = () => {
       <ContenedorBotonCentrado>
     <BotonDestacados type="submit" style={{backgroundColor:'#e2bcb7'}}><h2>PRUEBAS BÁSICAS</h2></BotonDestacados>
     <p class="col-sm" className="p-3" style={{textAlign:'center'}}>
-              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos infromado!
+              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos informado!
               </p>
   </ContenedorBotonCentrado>
     </div>
@@ -92,7 +92,7 @@ export const ReportsThree = () => {
     <BotonDestacados type="submit" style={{backgroundColor:'#fbe0c4'}} ><h2>PRUEBAS ESPECÍFICAS</h2></BotonDestacados>
   </ContenedorBotonCentrado>
   <p class="col-sm" className="p-3" style={{textAlign:'center'}}>
-              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos infromado!
+              Aún no se estipulan fechas, pero cuando eso suceda te mantendremos informado!
               </p>
     </div>
   );
